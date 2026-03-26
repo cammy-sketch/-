@@ -21,8 +21,8 @@
         }
         .prj-kv__bg img { width: 100%; height: auto; display: block; }
 
-        /* 活動獎勵 */
-        .prj-bonusblock .prj-content__inner { display: block; text-align: center; }
+        /* 活動獎勵 & 遊戲介紹共用樣式 */
+        .prj-bonusblock .prj-content__inner, .prj-gameintro .prj-content__inner { display: block; text-align: center; }
         .bonus-main-img { max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.5); border: 2px solid #f3d078; }
 
         /* 競技場樣式 */
@@ -53,7 +53,7 @@
         .prj-ranklist--header { background: rgba(255,255,255,0.05); border-radius: 10px 10px 0 0; }
         .prj-ranklist--header h6, .prj-ranklist--header p, .prj-ranklist--header small { color: #888 !important; font-size: 0.9rem !important; }
 
-        /* Footer 下載區塊 (透明無背景) */
+        /* Footer 下載區塊 */
         .prj-dwbox { 
             display: flex; align-items: flex-start; justify-content: center; gap: 30px; 
             padding: 40px 20px; background: transparent; border: none; max-width: 1000px; margin: 0 auto;
@@ -62,8 +62,6 @@
         .prj-dwbox__icon img { width: 120px; border-radius: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
         .prj-dwbox__badges { display: flex; gap: 12px; margin-bottom: 15px; flex-wrap: wrap; }
         .prj-dwbox__badges img { height: 45px; }
-
-        .prj-classify { display: flex; align-items: center; justify-content: center; gap: 15px; margin-top: 30px; padding: 20px; border-top: 1px solid #222; }
 
         @media (max-width: 768px) {
             .prj-kv__title h1 { font-size: 1.8rem; }
@@ -90,6 +88,7 @@
                         <li><a onclick='Prj.pageScrollTo("prj-bonusblock", -80);'>活動獎勵</a></li>
                         <li><a onclick='Prj.pageScrollTo("prj-eventblock", -80);'>競技場挑戰</a></li>
                         <li><a onclick='Prj.pageScrollTo("prj-rank-section", -80);'>排行榜</a></li>
+                        <li><a onclick='Prj.pageScrollTo("prj-game-intro", -80);'>遊戲介紹</a></li>
                         <li><a onclick='Prj.pageScrollTo("prj-newsBox", -80);'>相關報導</a></li>
                     </ul>
                 </div>
@@ -143,44 +142,8 @@
             </div>
         </section>
 
-        <section class="prj-block prj-newsBox" id="prj-newsBox">
-            <div class="prj-content">
-                <h3 class="prj-blocktitle"><span>相關報導</span></h3>
-                <div class="prj-content__inner">
-                    <div class="prj-news">
-                        <div class="prj-news__gnn">
-                            <a href="https://gnn.gamer.com.tw/detail.php?sn=301932" class="prj-news__gnnUnit" target="_blank">
-                                <div class="prj-news__img"><img src="https://p2.bahamut.com.tw/S/2KU/37/de816c9ad5fda8b9f9fd331a571xxjl5.JPG"></div>
-                                <div class="prj-news__article">
-                                    <time>2026-03-17</time>
-                                    <p class="prj-news__newsTitle">《魔靈召喚》x《魔戒》推出秘密寶箱活動</p>
-                                    <p class="prj-news__newscontent">Com2uS 公司宣布，將在《魔靈召喚：天空之役》中推出「秘密寶箱活動」，使玩家能更有趣地體驗聯名內容。</p>
-                                </div>
-                            </a>
-                            <a href="https://gnn.gamer.com.tw/detail.php?sn=301383" class="prj-news__gnnUnit" target="_blank">
-                                <div class="prj-news__img"><img src="https://p2.bahamut.com.tw/S/2KU/13/b6d91cddd4ffdd343a84c9d5e51xto15.JPG"></div>
-                                <div class="prj-news__article">
-                                    <time>2026-03-06</time>
-                                    <p class="prj-news__newsTitle">《魔靈召喚》x《魔戒》聯名推出「亞拉岡」變形幻影活動</p>
-                                    <p class="prj-news__newscontent">Com2uS 公司宣布推出 3 大聯名紀念活動，包含可入手聯名角色亞拉岡變形幻影。</p>
-                                </div>
-                            </a>
-                            <a href="https://gnn.gamer.com.tw/detail.php?sn=300326" class="prj-news__gnnUnit" target="_blank">
-                                <div class="prj-news__img"><img src="https://p2.bahamut.com.tw/S/2KU/49/ef71d877f0cbe1e77b6ca1ec611xm215.JPG"></div>
-                                <div class="prj-news__article">
-                                    <time>2026-02-13</time>
-                                    <p class="prj-news__newsTitle">《魔靈召喚》×《魔戒》聯名紀念試煉之塔更新</p>
-                                    <p class="prj-news__newscontent">在遊戲中進行「試煉之塔」更新，提供獲得「魔戒召喚書」的機會。</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="prj-block" id="prj-rank-section">
-            <div class="prj-content in-view" data-animate-in="fadeInUp">
+            <div class="prj-content">
                 <h3 class="prj-blocktitle"><span>排行榜</span></h3>
                 <div class="prj-content__inner">
                     <h6 style="text-align: center;">當玩家的積分相同時，排名順序將以先完成該積分者為先。</h6>
@@ -216,6 +179,43 @@
             </div>
         </section>
 
+        <section class="prj-block prj-gameintro" id="prj-game-intro">
+            <div class="prj-content">
+                <h3 class="prj-blocktitle"><span>遊戲介紹</span></h3>
+                <div class="prj-content__inner">
+                    <img src="bonus.jpg" alt="遊戲介紹" class="bonus-main-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="prj-block prj-newsBox" id="prj-newsBox">
+            <div class="prj-content">
+                <h3 class="prj-blocktitle"><span>相關報導</span></h3>
+                <div class="prj-content__inner">
+                    <div class="prj-news">
+                        <div class="prj-news__gnn">
+                            <a href="https://gnn.gamer.com.tw/detail.php?sn=301932" class="prj-news__gnnUnit" target="_blank">
+                                <div class="prj-news__img"><img src="https://p2.bahamut.com.tw/S/2KU/37/de816c9ad5fda8b9f9fd331a571xxjl5.JPG"></div>
+                                <div class="prj-news__article">
+                                    <time>2026-03-17</time>
+                                    <p class="prj-news__newsTitle">《魔靈召喚》x《魔戒》推出秘密寶箱活動</p>
+                                    <p class="prj-news__newscontent">Com2uS 公司宣布，將在《魔靈召喚：天空之役》中推出「秘密寶箱活動」，使玩家能更有趣地體驗聯名內容。</p>
+                                </div>
+                            </a>
+                            <a href="https://gnn.gamer.com.tw/detail.php?sn=301383" class="prj-news__gnnUnit" target="_blank">
+                                <div class="prj-news__img"><img src="https://p2.bahamut.com.tw/S/2KU/13/b6d91cddd4ffdd343a84c9d5e51xto15.JPG"></div>
+                                <div class="prj-news__article">
+                                    <time>2026-03-06</time>
+                                    <p class="prj-news__newsTitle">《魔靈召喚》x《魔戒》聯名推出「亞拉岡」變形幻影活動</p>
+                                    <p class="prj-news__newscontent">Com2uS 公司宣布推出 3 大聯名紀念活動，包含可入手聯名角色亞拉岡變形幻影。</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer class="prj-footer">
             <div class="prj-dwbox">
                 <div class="prj-dwbox__icon"><img src="https://p2.bahamut.com.tw/PRJ/2025/sw11th/app-img.png"></div>
@@ -241,7 +241,7 @@
             {q: "合成暗伊夫里特需要哪種屬性吸血鬼？", a: ["火", "水", "風", "光"], c: 0},
             {q: "公會戰防禦隊伍由幾人組成？", a: ["2人", "3人", "4人", "5人"], c: 1}
         ];
-        let cur = 0, sc = 0, timer, start, isChecking = false;
+        let cur = 0, sc = 0, timer, isChecking = false;
 
         $('#start-btn').click(() => { $('#quiz-intro').hide(); $('#quiz-game').show(); run(); });
 
@@ -266,15 +266,12 @@
         function check(idx) {
             isChecking = true;
             const corr = db[cur].c;
-            
             $('.ans-btn').each(function(i){
                 if(i === corr) $(this).addClass('correct');
                 else if(i === idx) $(this).addClass('wrong');
             });
-
             if(idx === corr) sc += 10;
             $('#score-val').text(sc);
-            
             cur++; 
             setTimeout(run, 1000);
         }
